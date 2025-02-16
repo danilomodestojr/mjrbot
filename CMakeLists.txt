@@ -53,6 +53,31 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Install Python nodes with execution permission
+install(
+  PROGRAMS
+    nodes/pose_capture.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME pose_capture
+)
+
+# Install Python nodes with execution permission
+install(
+  PROGRAMS
+    nodes/light_navigation.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME light_navigation
+)
+
+# Install Python nodes with execution permission
+install(
+  PROGRAMS
+    nodes/rain_navigation.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME rain_navigation
+)
+
+
 # MODIFIED 1/26/2025
 
 ament_package()
